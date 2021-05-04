@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class</title>
+    <style> h1 {background-color: crimson; color: white; padding-left: 15px;} body {background-color: whitesmoke;} </style>
+</head>
+<body>
+    <h1>Class JS</h1>
+    <small>see console</small>
+    <script>
+
+        class Factory {
+
+            constructor(name, arrayOfWorkers) {
+                this.name = name;
+                this.workers = arrayOfWorkers;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            getWorkers() {
+                return this.workers;
+            }
+
+            addWorker(nameOfWorker) {
+                this.workers.push(nameOfWorker)
+            }
+        }
+
+        let factory1 = new Factory('AMG works', ['Ken','Shane']);
+        console.log(factory1.getName())
+        console.log(factory1.getWorkers());
+        factory1.addWorker('Joe');
+        console.log(factory1.getWorkers());
+
+        let factory2 = new Factory('ADX', []);
+        factory2.addWorker('Sandy');
+        factory2.addWorker('Kevin');
+
+        console.log(factory2.getName());
+        console.log(factory2.getWorkers());
+
+    </script>
+</body>
+</html>

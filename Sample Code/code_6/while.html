@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While</title>
+</head>
+<body>
+    <script>
+        let condition = true;
+
+        while(condition) {
+
+            let num = Number(prompt('Enter any number but odd will stop the iteration', 2));
+
+            if(num%2!=0) {
+                condition = false;
+            } else {
+                console.log(num)
+            }
+
+        }
+    </script>
+</body>
+</html>

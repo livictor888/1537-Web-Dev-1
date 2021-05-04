@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preventing Container Collapse</title>
+    <style>
+        body { width: 500px; margin:0 auto;}
+        header {background-color:cadetblue; color: white; text-align: center;}
+
+        section {background-color:  whitesmoke; border: 1px dotted black; overflow: hidden;}
+        div {width: 150px; height: 150px; float: left;}
+        #one { background-color: yellow; } 
+        #two { background-color:brown; } 
+        #three { background-color:purple; box-shadow: 10px 10px 10px 10px yellow;} 
+    </style>
+</head>
+<body>
+    <header><h1>Preventing Container Collapse (overflow)</h1></header>
+    <section>
+        <div id='one'></div>
+        <div id='two'></div>
+        <div id='three'></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinator</title>
+    <style>
+        /* Descendent */
+        section p {
+            color: blue;
+        }
+
+        /* child */
+        div > p {
+            color: violet;
+        }
+
+        /* Adjacent */
+        h2 + p {
+            background-color: thistle;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <p> Para 1 </p>
+        <p> Para 2 </p>
+        <article>
+            <p> Para 3 </p>
+            <p> Para 4 </p>
+        </article>
+        <p>Last Para </p>
+    </section>
+
+    <hr>
+
+    <div>
+        <p> Para first </p> 
+        <article>
+            <p> Para 3 </p>
+            <p> Para 4 </p>
+        </article>
+        <p> Para last </p>
+    </div>
+
+    <hr>
+    
+    <h1>Heading One</h1>
+    <p>Para One</p>
+    <h2>Heading Two</h2>
+    <p>Para two</p>
+    <p>Para three</p>
+    <h3>Heading Three</h3>
+    <p>Para four</p>
+    <h2>Heading four</h2>
+    <p>Para five</p>
+    <p>Para six</p>
+   
+</body>
+</html>

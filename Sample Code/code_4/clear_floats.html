@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clear Floats</title>
+    <style>
+        body   { width: 600px; margin:0 auto;}
+        header { background-color:cadetblue; color: white;}
+        section{ background-color:  whitesmoke; border: 1px dotted black;}
+        div    { width: 120px; height: 150px;  margin-right: 10px; margin-bottom: 5px; border: 3px dotted black;}
+        #one   { background-color: #FE7C77; float: right; width: 50px; height: 400px;} 
+        #two   { background-color: #91C5D3; float: left; width: 50px; height: 350px } 
+        #three { background-color:aliceblue; clear: both;} 
+        #four  { background-color: #FAD168; }
+        #five  { background-color:  #EDF1F3;}
+        #six   { background-color: bisque;  }
+    </style>
+</head>
+<body>
+    <header><h1> Clear Floats</h1></header>
+    <main>
+        <p>clear propert has 6 different values: left | right | both | initial | none | inherit </p>
+        <p>
+           By clearing an element, we ensure that we turn "off" floating and resume normal document flow for the remaining elements
+        </p>
+        <div id='one'>One</div>
+        <div id='two'>Two</div>
+        <div id='three'>Three</div>
+        <div id='four'>Four</div>
+        <div id='five'>Five</div>
+        <div id='six'>Six</div>
+    </main>
+</body>
+</html>

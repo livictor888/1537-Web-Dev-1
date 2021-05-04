@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback function</title>
+    <style>
+        h1 {background-color: crimson; color: white; padding-left: 20px;}
+    </style>
+</head>
+<body>
+    <h1>Callback functions</h1>
+    <button> Click me </button>
+    
+    <script>
+
+        // --------------------- Example 1 --------------------------------------------//
+        let btn = document.querySelector('button');
+
+        // The second argument for addEventListener is a callback function
+        // function hello is the callback function
+        btn.addEventListener('click', function hello(){ alert('hello') })
+        // or
+        // btn.addEventListener('click', function { alert('hello') })
+        // in the above we are using a anonymous function as the callback function
+        // function without a name is called anonymous function
+        // ----------------------------------------------------------------------------// 
+
+        // --------------------- Example 2 --------------------------------------------//
+        function f1(cb) {
+            console.log('I am function 1');
+            cb(); // execute the callback function
+        }
+
+        function f2() {
+            console.log('I am function 2');
+        }
+
+        f1(f2); // f2 is the callback function
+        // ----------------------------------------------------------------------------// 
+
+    </script>
+</body>
+</html>

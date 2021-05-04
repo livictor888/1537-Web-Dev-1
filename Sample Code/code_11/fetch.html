@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch in action</title>
+    <style>
+        body { background-color: whitesmoke; }
+        h1 { background-color: teal; color: white;}
+        section > div {display: inline-block; border: 1px solid silver;}
+        section div:first-child { width: 60%; }
+        section div:last-child { width: 38%;}
+    </style>
+</head>
+<body>
+    <h1>Fakebook</h1>
+    <section>
+        <div>
+            <h3>What is Fakebook</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div>
+            <h3>Profiles</h3>
+            <b>First Name </b> <span id='first_name'>Kevin</span> <br>
+            <b>Last Name </b> <span id='last_name'>Spears</span> 
+            <img id='image' src='https://reqres.in/img/faces/1-image.jpg'> <br><br>
+            <button id='button'>Next Profile</button>
+        </div>
+    </section>
+    <script>
+        
+        let num = 2;
+
+        let btn = document.getElementById('button');
+        
+        btn.addEventListener('click', function(event) {
+            
+            // https://reqres.in/api/users/{1-12}
+            fetch('https://reqres.in/api/users/' + num).
+                then(function(res) { return res.json(); /* this gets passed to the next 'then' */ }).
+                then(function(json) { // json is the passed from previous 'then'
+                    // console.log(json);
+                    
+                    let first_name = json.data.first_name;
+                    let last_name = json.data.last_name;
+                    let image_url = json.data.avatar;
+
+                    document.getElementById('first_name').textContent = first_name;
+                    document.getElementById('last_name').textContent  = last_name;
+                    document.getElementById('image').src              = image_url;
+                }).
+                catch(function(error) { console.log(err)});
+
+            num = num + 1;
+
+            if (num > 12) {
+                num = 1;
+            }
+
+        });
+     
+    
+    </script>
+</body>
+</html>

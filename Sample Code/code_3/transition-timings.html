@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applying css transitions timing</title>
+    <style>
+        h1 {background-color: cornflowerblue; color: cornsilk; padding: 1%; box-shadow: 5px 5px rgb(109, 122, 146);}
+        section { border: 1px dotted red; padding: 1%; height: 60vh; width: 97vw; }
+        span {display: inline-block; background-color: red; color: aliceblue; margin-bottom: 1%; padding: 0.5%;}
+        div { width: 7vw; height: 7vh; background-color: darkkhaki; position: relative; left: 0px; 
+            transition: all 5s;
+        }
+        #one {
+            transition-timing-function: linear;
+        }
+        #two {
+            transition-timing-function: ease-in;
+        }
+        #three {
+            transition-timing-function: ease-out;
+        }
+        #four {
+            transition-timing-function: ease-in-out;
+        }
+        section:hover div {
+            left: 88vw;
+            border-radius: 50%;
+            background-color: darkseagreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Applying css transitions timing</h1>
+    <section>
+        <span>linear</span>
+        <div id='one'>
+        </div>
+        <hr>
+        <span>ease-in</span>
+        <div id='two'>
+        </div>
+        <hr>
+        <span>ease-out</span>
+        <div id='three'>
+        </div>
+        <hr>
+        <span>ease-in-out</span>
+        <div id='four'>
+        </div>
+    </section>
+</body>
+</html>

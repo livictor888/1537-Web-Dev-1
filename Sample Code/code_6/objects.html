@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // open your browsers console //
+        
+        let car = {
+            year: 1988,
+            color: 'red',
+            miles: 300000,
+            increaseMiles: function() {
+                car.miles = car.miles + 100;
+            }
+        };
+       
+        console.log(car);
+        console.log(car.color); // red
+        console.log(car['color']); //red
+
+        car['automatic'] = true; // adds a new property
+
+        car['miles'] = 200000; // modifies the existing value
+
+        // car.engine:manf = 'Delphi'  // Error in console
+        car['engine:manf'] = 'Delphi'; // To add or access property with special characters, need to use [] notation
+
+        console.log(car['engine:manf']);
+
+        console.log(car.miles); // Before: 300000
+        car.increaseMiles();
+        console.log(car.miles); // After : 300100
+
+    </script>
+</body>
+</html>

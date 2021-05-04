@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String functions</title>
+    <style>
+      h2 { background-color: crimson; color: white; padding-left: 20px; }
+      body { background-color: whitesmoke;}
+    </style>
+</head>
+<body>
+    <h2> String functions </h2>
+    <small>see console</small>
+    <script>
+      let str = 'hello';
+      let arr = [1,2,3];
+    
+      for(let i=0;i<arr.length;i++) {
+        console.log(arr[i]);
+      }
+      // strings have the 'length' property just like arrays have
+      // we can iterate over a string, like we do for arrays
+      for(let i=0;i<str.length;i++) {
+        console.log(str[i]);
+      }
+
+      arr[arr.length-1] = 5; // try to change the last element to 5
+      console.log(arr);      // works !
+
+      str[str.length-1] = 'B'; // try to change the last character to 'B'
+      console.log(str); // str remains as is, cannot be changed, immutable
+    
+
+     let newStr = '   HeLlO   ';
+     console.log(newStr);
+
+     newStr = newStr.trim(); // re-assign newStr to the value returned by trim()
+     console.log(newStr);    // HeLlO (without spaces)
+     
+     console.log(newStr.toLowerCase()); // hello
+     console.log(newStr.toUpperCase()); // HELLO
+
+     let nStr = 'Good_Morning_!';
+     console.log(nStr.substring(1,6)); // 1 - 5 (Captures all characters lying between indexes 1 to 5 (including 5))
+
+     console.log(nStr.split(' ')); // ['Good_Morning_!']
+     console.log(nStr.split('_')); // ['Good', 'Morning','!']
+
+     console.log(nStr.includes('ood')); // true
+     console.log(nStr.includes('ahx')); // false
+
+     console.log(nStr.indexOf('!'));   // 13
+     console.log(nStr.indexOf('ag'));  // -1, not found
+
+    </script>
+</body>
+</html>

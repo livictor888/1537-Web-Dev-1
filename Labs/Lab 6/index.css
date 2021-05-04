@@ -1,0 +1,45 @@
+body {margin: 0; padding: 0; background-color: whitesmoke;}
+main > * {
+    float: left;
+    width: 24%;
+    height: 98vh;
+}
+main aside {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+main aside img,  section img {
+    border-radius: 50%;
+}
+main section {
+    width: 49.5%;
+    padding: 1%;
+}
+
+/* ----------- Add your styles below ---------- */
+img.left{
+    float: left;
+    clear: both;
+}
+
+img.right{
+    float: right;
+}
+
+p.left{
+    float: left;
+}
+
+p.right{
+    float: right;
+    clear: both;
+}
+
+.cancel{
+    width: 20px;
+    height: 20px;
+    margin: 15px;
+    background-color: red;
+    border-radius: 15px;
+}

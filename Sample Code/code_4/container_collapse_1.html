@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preventing Container Collapse</title>
+    <style>
+        body { width: 500px; margin:0 auto; }
+        header {background-color:cadetblue; color: white; text-align: center;}
+
+        section {background-color:  whitesmoke; border: 2px dotted black;}
+        div {width: 150px; height: 150px; float: left; }
+        #one { background-color: yellow; } 
+        #two { background-color:brown; } 
+        #three { background-color:purple; } 
+        .cf {clear: both; }
+    </style>
+</head>
+<body>
+    <header><h1>Preventing Container Collapse (Adding new element)</h1></header>
+    <section>
+        <div id='one'></div>
+        <div id='two'></div>
+        <div id='three'></div>
+        <p class='cf'></p>
+    </section>
+</body>
+</html>

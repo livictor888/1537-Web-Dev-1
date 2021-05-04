@@ -1,0 +1,36 @@
+h2 + p {
+    background-color: #7f7700;
+    color:white;
+}
+
+a{
+    color:teal;
+}
+
+a:visited {
+    color:white;
+}
+
+div > ul{
+    background-color: #BFB300
+}
+
+div > ol{
+    background-color: #BFB300
+}
+
+tr:nth-child(2n){
+    background-color:lightblue;
+}
+
+tr:nth-child(2n+1){
+    background-color:grey;
+}
+
+tr:nth-child(5){
+    background-color:yellow;
+}
+
+li:hover{
+    background-color:hotpink;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <style>
+        h1 { background-color: crimson; color: white; padding-left: 20px; }
+        body { background-color: whitesmoke; }
+    </style>
+</head>
+<body>
+    <h1>JSON</h1>
+    <ul id='links'>
+    </ul>
+    <script>
+
+        let links = {
+           "facebook" : "https://www.facebook.com/royholmes",
+           "twitter"  : "https://www.twitter.com/royholmes"
+    	 };
+
+        let ul = document.getElementById('links');
+
+        for(let prop in links) {
+            let li = document.createElement('li');
+            let a = document.createElement('a');
+            a.href = links[prop]; // links['facebook'] => https://www.facebook.com/royholmes
+            
+            let text = document.createTextNode(prop);
+            a.appendChild(text); // <a href='https://www.facebook.com/royholmes'>facebook</a>
+            
+            li.appendChild(a); // <li><a href='https://www.facebook.com/royholmes'>facebook</a></li>
+
+            ul.appendChild(li); // <ul id='links'><li><a href='https://www.facebook.com/royholmes'>facebook</a></li></ul>
+        }
+
+
+    </script>
+</body>
+</html>

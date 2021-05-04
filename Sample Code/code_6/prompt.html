@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt</title>
+</head>
+<body>
+    <script>
+        // Determine your age after 10 years
+
+
+        let age = prompt("Tell me your current age", 25);
+        // prompt returns a String value
+        // eg: 
+        // "25" + 10 => "25" + "10" => "2510"
+        
+        // To solve the problem we make use of the parseInt function
+        // parseInt("25") => 25
+        let finalage = parseInt(age) + 10;
+        document.write("The age after 10 years will be " + finalage);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-color: #678bb3; 
+    padding:0;
+    margin:0;
+}
+
+/*------ Add your code below  -----*/
+
+img{
+    position: relative;
+    animation-name: floating_cloud;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    }
+
+@keyframes floating_cloud{
+    from{left: -30vw;}
+    to{left:100vw;}
+}
+
+#cloud2{
+    animation-name: floating_cloud;
+    left:-30vw;
+    animation-delay: 6s;
+}
+
+

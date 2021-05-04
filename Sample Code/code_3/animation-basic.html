@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation basic</title>
+    <style>
+        h1 {background-color: darkcyan; color: white; padding: 0.5%;}
+        section {background-color:#4C4B4C;}
+
+        
+        img { width: 10vw; height: 30vh; position: relative;
+            animation-name: move_left;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes move_left {
+            from {left: 10vw;}
+            to {left: 85vw;} 
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation basic</h1>
+    <section>
+        <img src='https://media1.tenor.com/images/be897a7f976529d9c11475b0d40b5631/tenor.gif' />
+    </section>
+</body>
+</html>

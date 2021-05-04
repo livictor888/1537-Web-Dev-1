@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floats Basic</title>
+    <style>
+        body { width: 500px; margin:0 auto;}
+        header {background-color: brown; color: white;}
+        /* 
+            the width of the section is 500px because it inherits the width of its parent,
+            In this case the main, the main inherits the width from its parent, i.e the body
+            => main = 500px , => section = 500px
+        */
+        section {background-color:  whitesmoke; border: 1px dotted black;}
+        div {width: 200px; height: 150px;}
+        #one { background-color: yellow; float: left; margin-right: 10px;} 
+        #two { background-color:brown; float: left; margin-right: 10px;} 
+        #three { background-color:purple; float: left; margin-right: 10px;} 
+    </style>
+</head>
+<body>
+    <header><h1>Floats Basic</h1></header>
+    <main>
+        <p>Float has four possible values : left | right | inherit | none </p>
+        <p>
+            Floating to left or right moves element to its left-most or right-most edge of parent container.
+            Removes element from its normal flow and will cause elements below to shift accordingly
+        </p>
+        <section>
+            <div id='one'></div>
+            <div id='two'></div>
+            <div id='three'></div>
+        </section>
+    </main>
+</body>
+</html>

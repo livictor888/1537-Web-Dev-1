@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-Classes</title>
+    <style>
+        p:hover {
+            background-color: red;
+        }
+        a:visited {
+            color: red;
+        }
+        p:first-child {
+            background-color: teal;
+        }
+
+        /* n=0 nothing selected */
+        /* n=1, 2*1 = 2, second child */
+        /* n=2, 2*2 = 4, fourth child and so on ...*/
+        ul li:nth-child(2n) {
+            background-color: blue;
+        }
+
+        /* Select the 9th child */
+        ul li:nth-child(9) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Para 1</p>
+    <h1>Heading One</h1>
+    <p>Para 2</p>
+    <h2>Heading two</h2>
+    <p>Para 3</p>
+    <p>Para 4</p>
+    <h3>Heading three</h3>
+    <p>Para 5</p>
+    
+    <hr>
+
+    <a href='http://www.google.com'>Go to google</a> <br>
+    <a href='http://www.facebook.com'>Go to facebook</a> <br>
+    <a href='http://www.bcit.ca'>Go to bcit</a>
+  
+    <hr>
+
+    <p>Para 2</p>
+    <div>
+        <p>Para 3</p>
+        <p>Para 4</p>
+    </div>
+    <p>Para 5</p>
+
+    <hr>
+
+    <ul>
+        <li> Item One</li>
+        <li> Item Two</li>
+        <li> Item Three</li>
+        <li> Item Four</li>
+        <li> Item Five</li>
+        <li> Item Six</li>
+        <li> Item Seven</li>
+        <li> Item Eight</li>
+        <li> Item Nine</li>
+    </ul>
+ 
+</body>
+</html>

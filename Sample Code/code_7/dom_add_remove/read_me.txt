@@ -1,0 +1,1 @@
+Please see the code in index.js which adds and removes elements 
